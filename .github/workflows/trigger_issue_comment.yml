@@ -1,0 +1,14 @@
+name: Trigger Issue Comment
+
+on:
+  issue_comment:
+      types:
+          - created
+    
+
+jobs:
+  tests:
+    runs-on: self-hosted
+    steps:
+      - name: Saludar
+        run: echo 'Llego un nuevo ISSUE COMMENT'
