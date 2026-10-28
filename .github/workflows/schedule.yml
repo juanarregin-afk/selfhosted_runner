@@ -2,10 +2,10 @@ name: Trigger schedule
 
 on:
   schedule:
-    - cron: '33 * * * *'
+    - cron: '36 * * * *'
   
 jobs:
-  tests:
+  schedule-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Saludar
