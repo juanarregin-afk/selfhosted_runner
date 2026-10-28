@@ -27,4 +27,4 @@ jobs:
       - name: Saludar
         run: echo Parametros
       - name: Saludo input
-        run: echo {{ github.events.inputs.nombre }}
+        run: echo ${{ github.event.inputs.nombre }}
