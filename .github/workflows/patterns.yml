@@ -1,0 +1,15 @@
+name: Test patterns
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**/*.js'
+
+jobs:
+  tests:
+    runs-on: self-hosted
+    steps:
+      - name: Saludar
+        run: Hola JS
