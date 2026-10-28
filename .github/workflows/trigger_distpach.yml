@@ -10,6 +10,12 @@ on:
           - bajo
           - medio
           - alto
+      nombre:
+        description: 'Ingrese su Nombre'
+        required: false
+        type: string
+        default: 'Anonimus'
+          
   
 jobs:
 
@@ -19,4 +25,6 @@ jobs:
     
     steps:
       - name: Saludar
-        run: echo 'Opciones'
+        run: echo Parametros
+      - name: Saludo input
+        run: echo {{ github.events.inputs.nombre }}
