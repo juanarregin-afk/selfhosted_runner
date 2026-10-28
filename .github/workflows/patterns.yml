@@ -9,7 +9,7 @@ on:
 
 jobs:
   tests:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Saludar
-        run: Hola JS
+        run: echo 'Hola JS'
