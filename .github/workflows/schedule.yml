@@ -1,0 +1,12 @@
+name: Trigger schedule
+
+on:
+  schedule:
+    - cron: '33 * * * *'
+  
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Saludar
+        run: echo 'Inicializa el cronT'
