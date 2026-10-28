@@ -1,0 +1,22 @@
+name: Trigger Distpach
+on: 
+  workflow_dispatch:
+    inputs:
+      alerta:
+        description: 'Nivel'
+        required: true
+        type: choice
+        options:
+          - bajo
+          - medio
+          - alto
+  
+jobs:
+
+  demo:
+  
+    runs-on: ubuntu-22.04
+    
+    steps:
+      - name: Saludar
+        run: echo 'Opciones'
