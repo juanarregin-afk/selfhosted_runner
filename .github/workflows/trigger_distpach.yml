@@ -1,29 +1,31 @@
-name: Trigger Distpach
+name: Trigger-Dispatch
 on: 
   workflow_dispatch:
     inputs:
-      alerta:
+      nivel:
         description: 'Nivel'
-        required: true
+        required: true        
         type: choice
         options:
           - bajo
           - medio
           - alto
       nombre:
-        description: 'Ingrese su Nombre'
+        description: 'Ingresa tu nombre'
         required: false
         type: string
-        default: 'Anonimus'
-          
+        default: 'Anonimo'        
   
 jobs:
 
   demo:
   
-    runs-on: ubuntu-22.04
-    
+    runs-on: self-hosted    
     steps:
+      - name: Comparacion de nombre
+        if: ${{ (github.event.inputs.nombre == 'Anonimo') && (true) }} 
+        run: echo 'Condicion ok'
+        
       - name: Saludar
         run: echo Parametros
       - name: Saludo input
