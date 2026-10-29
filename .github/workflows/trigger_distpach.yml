@@ -20,7 +20,7 @@ jobs:
 
   demo:
   
-    runs-on: self-hosted    
+    runs-on: ubuntu-22.04    
     steps:
       - name: Comparacion de nombre
         if: ${{ (github.event.inputs.nombre == 'Anonimo') && (true) }} 
